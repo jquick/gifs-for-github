@@ -59,3 +59,23 @@
 [class*="prc-Overlay-Overlay"] {
   overflow: visible !important;
 }
+
+/*
+ * Override for GitHub's toolbar alignment bug
+ *
+ * When the review modal gets a vertical scrollbar, GitHub's media query
+ * incorrectly applies justify-content: flex-end to the toolbar, causing misalignment
+ * of toolbar items.
+ *
+ * GitHub's problematic rule:
+ * @media (width > 600px) {
+ *     .Toolbar-module__toolbar--TBvFM:last-child {
+ *         justify-content: flex-end;
+ *     }
+ * }
+ *
+ * This override forces the correct alignment when the giphy field is present.
+ */
+.ghg-has-giphy-field [class*="Toolbar-module__toolbar"] {
+  justify-content: flex-end !important
+}

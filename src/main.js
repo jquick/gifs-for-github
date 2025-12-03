@@ -258,7 +258,7 @@ function init() {
 
   // Add buttons to existing toolbars
   // Use a selector that matches both new and old GitHub styles
-  const toolbarSelector = '[aria-label="Formatting tools"]:not(.ghg-has-giphy-button), markdown-toolbar:not(.ghg-has-giphy-button)';
+  const toolbarSelector = '[aria-label="Formatting tools"]:not(.ghg-has-giphy-button), markdown-toolbar:not(.ghg-has-giphy-button), action-bar:not(.ghg-has-giphy-button)';
   const existingToolbars = select.all(toolbarSelector);
   debugLog('Found existing toolbars:', existingToolbars.length);
 
